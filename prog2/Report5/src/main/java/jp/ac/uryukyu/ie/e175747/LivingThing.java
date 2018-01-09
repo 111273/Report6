@@ -22,6 +22,10 @@ public class LivingThing {
         return name;
     }
 
+    public int getAttack(){
+        return attack;
+    }
+
     public void attack(LivingThing opponent){
         if (dead == false){
             int damage = (int)(Math.random() * attack);
