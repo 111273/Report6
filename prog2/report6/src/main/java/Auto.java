@@ -12,10 +12,10 @@ public class Auto {
             public void run() {
                 System.out.println("いろはす");
             }
-        }, 0, 5000);
+        }, 5000, 10);      //５秒に１回出力する
 
         try {
-            Thread.sleep(50000);
+            Thread.sleep(5000);       //５０秒間動き続ける
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

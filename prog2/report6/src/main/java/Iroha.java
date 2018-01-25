@@ -1,10 +1,13 @@
-public class Iroha {
+public class Iroha extends Auto {
 
     public static void kaiwa(String input ,String botname) {
+        Auto auto = new Auto();
+
 
         if (input.equals("まかせろ")) {
             System.out.println(botname + ":わぁー頼れるぅー、そういうことなら次もお願いしますね♪");
         } else if (input.equals("しりあい")) {
+            //複数の解答パターン持ち
             int num0 = (int)(Math.random()*2);
             switch(num0) {
                 case 0:
@@ -24,23 +27,22 @@ public class Iroha {
             System.out.println(botname + ":もう行っちゃうんですかー？");
         } else if (input.equals("コマンド")) {
             System.out.println("コマンド一覧\n" + "まかせろ\n" + "しりあい\n" + "がんばれ\n" + "かだい\n" + "たんじょうび\n" + "じゃあな");
-        } else {
-            int num = (int)(Math.random()*3);   //不特定の単語に対してランダムに返答
+        }else if (input.equals(auto())){
+            System.out.println(botname + "先輩？");
+        }else{
+            int num = (int)(Math.random()*3);
+            //不特定の単語に対してランダムに返答
             switch(num){
                 case 0:
                     System.out.println(botname + ":は？な、なんですか口説いてるんですかごめんなさい無理です。好きな人がいるので");
                     break;
-
                 case 1:
                     System.out.println(botname + ":なんですか傷心に付け込んで口説いてるんですかごめんなさいまだちょっと無理です");
                     break;
-
                 case 2:
                     System.out.println(botname +":ちょ、なんですかその手。ポイント稼ぎですか？うわぁ・・・");
                     break;
                     }
-
-
         }
     }
 }
